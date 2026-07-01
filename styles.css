@@ -1,77 +1,25 @@
 /*======================================================
 WHO DO YOU CALL SAVIOR?
-Master Stylesheet
 Bradley Hobbs
+Master Stylesheet
 Part 1 • Foundation
 ======================================================*/
 
+
 /*======================================================
-CSS Reset
+RESET
 ======================================================*/
 
 *,
 *::before,
 *::after{
+
 margin:0;
 padding:0;
+
 box-sizing:border-box;
-}
-
-/*======================================================
-Root Variables
-Inspired by the Hero Banner
-======================================================*/
-
-:root{
-
-/* Backgrounds */
-
---bg:#faf7f2;
---surface:#ffffff;
---surface-alt:#f4efe7;
-
-/* Primary Colors */
-
---navy:#24384d;
---navy-dark:#1b2b3c;
-
---gold:#c8a45a;
---gold-light:#dfc786;
---gold-dark:#9d7938;
-
-/* Supporting */
-
---cream:#f8f5ef;
---stone:#d9d1c6;
---border:#e6ddd3;
-
-/* Text */
-
---text:#2f2f2f;
---text-light:#6b6b6b;
---heading:#223548;
---white:#ffffff;
-
-/* Effects */
-
---radius:18px;
-
---transition:.35s ease;
-
---shadow-sm:
-0 6px 18px rgba(0,0,0,.06);
-
---shadow:
-0 14px 40px rgba(0,0,0,.08);
-
---shadow-lg:
-0 30px 70px rgba(0,0,0,.12);
 
 }
-
-/*======================================================
-HTML
-======================================================*/
 
 html{
 
@@ -81,10 +29,6 @@ scroll-padding-top:90px;
 
 }
 
-/*======================================================
-Body
-======================================================*/
-
 body{
 
 font-family:"Inter",sans-serif;
@@ -93,12 +37,9 @@ font-size:16px;
 
 line-height:1.8;
 
-color:var(--text);
+background:#faf7f2;
 
-background:linear-gradient(
-180deg,
-var(--bg),
-var(--cream));
+color:#2f2f2f;
 
 overflow-x:hidden;
 
@@ -108,90 +49,94 @@ text-rendering:optimizeLegibility;
 
 }
 
+
 /*======================================================
-Selection
+COLOR PALETTE
+Inspired by Hero Banner
 ======================================================*/
 
-::selection{
+:root{
 
-background:var(--gold);
+/* Backgrounds */
 
-color:var(--white);
+--bg:#faf7f2;
+
+--surface:#ffffff;
+
+--surface-alt:#f3eee6;
+
+--cream:#f8f5ef;
+
+
+/* Brand */
+
+--navy:#23384c;
+
+--navy-dark:#1b2b3d;
+
+--gold:#c7a252;
+
+--gold-light:#e2c886;
+
+--gold-dark:#9f7830;
+
+
+/* Supporting */
+
+--stone:#d7cec2;
+
+--border:#e7dfd4;
+
+
+/* Text */
+
+--heading:#23384c;
+
+--text:#2f2f2f;
+
+--text-light:#6a6a6a;
+
+--white:#ffffff;
+
+
+/* Radius */
+
+--radius-sm:8px;
+
+--radius:18px;
+
+--radius-lg:30px;
+
+
+/* Shadows */
+
+--shadow-sm:
+0 4px 16px rgba(0,0,0,.05);
+
+--shadow:
+0 12px 35px rgba(0,0,0,.08);
+
+--shadow-lg:
+0 25px 70px rgba(0,0,0,.12);
+
+
+/* Transition */
+
+--transition:.35s ease;
 
 }
 
-/*======================================================
-Images
-======================================================*/
-
-img{
-
-display:block;
-
-max-width:100%;
-
-height:auto;
-
-}
 
 /*======================================================
-Links
-======================================================*/
-
-a{
-
-text-decoration:none;
-
-color:inherit;
-
-transition:var(--transition);
-
-}
-
-/*======================================================
-Lists
-======================================================*/
-
-ul,
-ol{
-
-list-style:none;
-
-}
-
-/*======================================================
-Container
-======================================================*/
-
-.container{
-
-width:min(1180px,92%);
-
-margin:auto;
-
-}
-
-/*======================================================
-Sections
-======================================================*/
-
-section{
-
-padding:110px 0;
-
-position:relative;
-
-}
-
-/*======================================================
-Typography
+TYPOGRAPHY
 ======================================================*/
 
 h1,
 h2,
 h3,
 h4,
-h5{
+h5,
+h6{
 
 font-family:"Cinzel",serif;
 
@@ -207,19 +152,25 @@ margin-bottom:24px;
 
 h1{
 
-font-size:clamp(3rem,6vw,5.4rem);
+font-size:clamp(3rem,6vw,5.5rem);
 
 }
 
 h2{
 
-font-size:clamp(2.2rem,4vw,3.2rem);
+font-size:clamp(2.2rem,4vw,3.25rem);
 
 }
 
 h3{
 
 font-size:1.5rem;
+
+}
+
+h4{
+
+font-size:1.25rem;
 
 }
 
@@ -231,19 +182,15 @@ color:var(--text);
 
 }
 
-/*======================================================
-Subtitle
-======================================================*/
-
 .subtitle{
 
 font-family:"Cormorant Garamond",serif;
 
-font-size:clamp(1.5rem,3vw,2.4rem);
-
-font-weight:500;
+font-size:clamp(1.6rem,3vw,2.4rem);
 
 font-style:italic;
+
+font-weight:500;
 
 color:var(--gold-dark);
 
@@ -251,30 +198,88 @@ margin-bottom:24px;
 
 }
 
-/*======================================================
-Small Heading
-======================================================*/
+blockquote{
 
-.eyebrow{
+font-family:"Cormorant Garamond",serif;
 
-font-family:"Inter",sans-serif;
+font-size:clamp(1.8rem,3vw,2.8rem);
 
-font-size:.85rem;
+font-style:italic;
 
-font-weight:700;
+font-weight:500;
 
-letter-spacing:3px;
+color:var(--navy);
 
-text-transform:uppercase;
-
-color:var(--gold-dark);
-
-margin-bottom:20px;
+line-height:1.4;
 
 }
 
+
 /*======================================================
-Buttons
+LINKS
+======================================================*/
+
+a{
+
+color:inherit;
+
+text-decoration:none;
+
+transition:var(--transition);
+
+}
+
+
+/*======================================================
+IMAGES
+======================================================*/
+
+img{
+
+display:block;
+
+max-width:100%;
+
+height:auto;
+
+}
+
+
+/*======================================================
+LISTS
+======================================================*/
+
+ul,
+ol{
+
+list-style:none;
+
+}
+
+
+/*======================================================
+LAYOUT
+======================================================*/
+
+.container{
+
+width:min(1180px,92%);
+
+margin-inline:auto;
+
+}
+
+section{
+
+position:relative;
+
+padding:110px 0;
+
+}
+
+
+/*======================================================
+BUTTONS
 ======================================================*/
 
 .button,
@@ -287,7 +292,7 @@ align-items:center;
 
 justify-content:center;
 
-padding:16px 34px;
+padding:16px 36px;
 
 border-radius:999px;
 
@@ -339,8 +344,38 @@ color:var(--white);
 
 }
 
+
 /*======================================================
-Section Divider
+CARDS
+======================================================*/
+
+.card{
+
+background:var(--surface);
+
+padding:40px;
+
+border-radius:var(--radius);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+transition:var(--transition);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow);
+
+}
+
+
+/*======================================================
+DIVIDER
 ======================================================*/
 
 .section-divider{
@@ -377,52 +412,9 @@ color:var(--gold);
 
 }
 
-/*======================================================
-Cards
-======================================================*/
-
-.card{
-
-background:var(--surface);
-
-padding:40px;
-
-border-radius:var(--radius);
-
-box-shadow:var(--shadow-sm);
-
-transition:var(--transition);
-
-border:1px solid var(--border);
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:var(--shadow);
-
-}
 
 /*======================================================
-Background Utilities
-======================================================*/
-
-.bg-light{
-
-background:var(--surface);
-
-}
-
-.bg-alt{
-
-background:var(--surface-alt);
-
-}
-
-/*======================================================
-Text Utilities
+HELPER CLASSES
 ======================================================*/
 
 .text-center{
@@ -437,34 +429,40 @@ color:var(--gold);
 
 }
 
-.text-navy{
-
-color:var(--navy);
-
-}
-
 .text-light{
 
 color:var(--text-light);
 
 }
 
+.bg-light{
+
+background:var(--surface);
+
+}
+
+.bg-alt{
+
+background:var(--surface-alt);
+
+}
+
+
 /*======================================================
-Spacing Utilities
+SELECTION
 ======================================================*/
 
-.mt-1{margin-top:1rem;}
-.mt-2{margin-top:2rem;}
-.mt-3{margin-top:3rem;}
-.mt-4{margin-top:4rem;}
+::selection{
 
-.mb-1{margin-bottom:1rem;}
-.mb-2{margin-bottom:2rem;}
-.mb-3{margin-bottom:3rem;}
-.mb-4{margin-bottom:4rem;}
+background:var(--gold);
+
+color:var(--white);
+
+}
+
 
 /*======================================================
-Accessibility
+ACCESSIBILITY
 ======================================================*/
 
 :focus-visible{
@@ -473,7 +471,7 @@ outline:3px solid var(--gold);
 
 outline-offset:4px;
 
-border-radius:6px;
+border-radius:4px;
 
 }
 
@@ -493,20 +491,40 @@ left:20px;
 
 top:20px;
 
+padding:12px 18px;
+
 background:var(--navy);
 
 color:var(--white);
 
-padding:12px 18px;
+border-radius:var(--radius-sm);
 
 z-index:9999;
 
-border-radius:8px;
-
 }
 
+
 /*======================================================
-HEADER
+SPACING UTILITIES
+======================================================*/
+
+.mt-1{margin-top:1rem;}
+.mt-2{margin-top:2rem;}
+.mt-3{margin-top:3rem;}
+.mt-4{margin-top:4rem;}
+
+.mb-1{margin-bottom:1rem;}
+.mb-2{margin-bottom:2rem;}
+.mb-3{margin-bottom:3rem;}
+.mb-4{margin-bottom:4rem;}
+
+/*======================================================
+PART 2
+HEADER & NAVIGATION
+======================================================*/
+
+/*======================================================
+SITE HEADER
 ======================================================*/
 
 .site-header{
@@ -521,23 +539,25 @@ width:100%;
 
 z-index:1000;
 
-padding:18px 0;
-
-transition:all .4s ease;
+padding:22px 0;
 
 background:transparent;
+
+transition:all .4s ease;
 
 }
 
 .site-header.scrolled{
 
-background:rgba(248,245,239,.96);
+background:rgba(248,245,239,.97);
 
-backdrop-filter:blur(14px);
+backdrop-filter:blur(16px);
 
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+-webkit-backdrop-filter:blur(16px);
 
-padding:12px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+padding:14px 0;
 
 }
 
@@ -565,13 +585,13 @@ LOGO
 
 font-family:"Cinzel",serif;
 
-font-size:1.3rem;
+font-size:1.4rem;
 
 font-weight:700;
 
 letter-spacing:2px;
 
-color:white;
+color:var(--white);
 
 transition:var(--transition);
 
@@ -593,21 +613,23 @@ display:flex;
 
 align-items:center;
 
-gap:30px;
+gap:32px;
 
 }
 
 .nav-links a{
 
+position:relative;
+
 font-size:.95rem;
 
 font-weight:600;
 
-letter-spacing:.4px;
+letter-spacing:.5px;
 
-color:white;
+color:var(--white);
 
-position:relative;
+transition:var(--transition);
 
 }
 
@@ -616,6 +638,10 @@ position:relative;
 color:var(--navy);
 
 }
+
+/*======================================================
+UNDERLINE
+======================================================*/
 
 .nav-links a::after{
 
@@ -633,13 +659,27 @@ height:2px;
 
 background:var(--gold);
 
-transition:.3s;
+transition:.35s;
 
 }
 
-.nav-links a:hover::after{
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
 
 width:100%;
+
+}
+
+.nav-links a:hover{
+
+color:var(--gold-light);
+
+}
+
+.site-header.scrolled .nav-links a:hover{
+
+color:var(--gold-dark);
 
 }
 
@@ -651,7 +691,7 @@ READ BUTTON
 
 background:var(--gold);
 
-color:white;
+color:var(--white);
 
 padding:14px 28px;
 
@@ -667,12 +707,14 @@ box-shadow:var(--shadow-sm);
 
 background:var(--gold-dark);
 
-transform:translateY(-2px);
+transform:translateY(-3px);
+
+box-shadow:var(--shadow);
 
 }
 
 /*======================================================
-MOBILE MENU BUTTON
+MOBILE BUTTON
 ======================================================*/
 
 .menu-toggle{
@@ -683,59 +725,89 @@ background:none;
 
 border:none;
 
-font-size:1.8rem;
-
 cursor:pointer;
 
-color:white;
+padding:6px;
 
 }
 
-.site-header.scrolled .menu-toggle{
+.menu-toggle span{
+
+display:block;
+
+width:28px;
+
+height:2px;
+
+margin:6px 0;
+
+background:var(--white);
+
+transition:.35s;
+
+}
+
+.site-header.scrolled .menu-toggle span{
+
+background:var(--navy);
+
+}
+
+/*======================================================
+MOBILE MENU
+======================================================*/
+
+.mobile-menu{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:320px;
+
+height:100vh;
+
+background:var(--cream);
+
+padding:120px 40px;
+
+box-shadow:-10px 0 40px rgba(0,0,0,.15);
+
+transition:.4s ease;
+
+z-index:999;
+
+}
+
+.mobile-menu.active{
+
+right:0;
+
+}
+
+.mobile-menu a{
+
+display:block;
+
+padding:18px 0;
+
+font-size:1.05rem;
+
+font-weight:600;
+
+border-bottom:1px solid var(--border);
 
 color:var(--navy);
 
 }
 
-/*======================================================
-HERO
-======================================================*/
+.mobile-menu a:hover{
 
-.hero{
+color:var(--gold-dark);
 
-position:relative;
-
-height:100vh;
-
-min-height:720px;
-
-padding:0;
-
-display:flex;
-
-align-items:center;
-
-overflow:hidden;
-
-}
-
-/*======================================================
-HERO IMAGE
-======================================================*/
-
-.hero img{
-
-position:absolute;
-
-inset:0;
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-object-position:center;
+padding-left:10px;
 
 }
 
@@ -743,121 +815,75 @@ object-position:center;
 OVERLAY
 ======================================================*/
 
-.hero::before{
+.menu-overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.45);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:998;
+
+}
+
+.menu-overlay.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+/*======================================================
+STICKY SHADOW
+======================================================*/
+
+.site-header::after{
 
 content:"";
 
 position:absolute;
 
-inset:0;
+left:0;
 
-background:
+bottom:0;
 
-linear-gradient(
+width:100%;
 
-90deg,
+height:1px;
 
-rgba(248,245,239,.08),
+background:transparent;
 
-rgba(248,245,239,.03)
+transition:.35s;
 
-);
+}
 
-z-index:1;
+.site-header.scrolled::after{
+
+background:rgba(0,0,0,.06);
 
 }
 
 /*======================================================
-HERO CONTENT
+RESPONSIVE
 ======================================================*/
 
-.hero-content{
-
-position:relative;
-
-z-index:2;
-
-max-width:620px;
-
-}
-
-/*======================================================
-BUTTON GROUP
-======================================================*/
-
-.hero-buttons{
-
-display:flex;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-margin-top:40px;
-
-}
-
-/*======================================================
-SCROLL INDICATOR
-======================================================*/
-
-.scroll-indicator{
-
-position:absolute;
-
-bottom:40px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-z-index:2;
-
-font-size:.8rem;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-color:white;
-
-animation:bounce 2.4s infinite;
-
-}
-
-/*======================================================
-BOUNCE
-======================================================*/
-
-@keyframes bounce{
-
-0%{
-
-transform:translate(-50%,0);
-
-}
-
-50%{
-
-transform:translate(-50%,12px);
-
-}
-
-100%{
-
-transform:translate(-50%,0);
-
-}
-
-}
-
-/*======================================================
-MOBILE
-======================================================*/
-
-@media(max-width:900px){
+@media(max-width:960px){
 
 .nav-links{
+
+display:none;
+
+}
+
+.nav-button{
 
 display:none;
 
@@ -869,37 +895,31 @@ display:block;
 
 }
 
-.hero{
+}
 
-min-height:600px;
+@media(max-width:768px){
+
+.site-header{
+
+padding:18px 0;
 
 }
 
-.hero-buttons{
+.mobile-menu{
 
-justify-content:center;
+width:280px;
 
-}
-
-}
-
-@media(max-width:600px){
-
-.hero{
-
-min-height:520px;
+padding:100px 30px;
 
 }
 
-.navbar{
-
-gap:20px;
-
 }
 
-.nav-button{
+@media(max-width:480px){
 
-display:none;
+.mobile-menu{
+
+width:100%;
 
 }
 
