@@ -1698,3 +1698,33 @@ color:var(--gold-dark);
 margin:45px auto;
 
 }
+/*======================================================
+CONTENTS PAGE NAVIGATION
+======================================================*/
+
+.page-header ~ * .site-header,
+body.contents-page .site-header{
+
+background:rgba(248,245,239,.96);
+
+backdrop-filter:blur(16px);
+
+-webkit-backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+body.contents-page .logo,
+
+body.contents-page .nav-links a{
+
+color:var(--navy);
+
+}
+
+body.contents-page .menu-toggle span{
+
+background:var(--navy);
+
+}
