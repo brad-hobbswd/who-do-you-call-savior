@@ -539,21 +539,25 @@ width:100%;
 
 z-index:1000;
 
-padding:22px 0;
+padding:20px 0;
 
-background:transparent;
+background:rgba(35,56,76,.35);
 
-transition:all .4s ease;
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+transition:all .35s ease;
 
 }
 
 .site-header.scrolled{
 
-background:rgba(248,245,239,.97);
+background:rgba(248,245,239,.96);
 
-backdrop-filter:blur(16px);
+backdrop-filter:blur(18px);
 
--webkit-backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(18px);
 
 box-shadow:0 10px 30px rgba(0,0,0,.08);
 
@@ -591,7 +595,7 @@ font-weight:700;
 
 letter-spacing:2px;
 
-color:var(--white);
+color:var(--navy);
 
 transition:var(--transition);
 
@@ -1323,6 +1327,96 @@ align-items:center;
 gap:20px;
 
 font-size:.9rem;
+
+}
+
+/*======================================================
+FOOTER TEXT FIX
+======================================================*/
+
+.site-footer{
+
+color:rgba(255,255,255,.88);
+
+}
+
+.site-footer p{
+
+color:rgba(255,255,255,.82);
+
+}
+
+.site-footer li{
+
+color:rgba(255,255,255,.82);
+
+}
+
+.site-footer a{
+
+color:rgba(255,255,255,.82);
+
+}
+
+.site-footer a:hover{
+
+color:var(--gold-light);
+
+}
+
+.footer-scripture p{
+
+color:rgba(255,255,255,.75);
+
+}
+
+.footer-bottom p{
+
+color:rgba(255,255,255,.65);
+
+margin-bottom:0;
+
+}
+
+.footer-scripture p:first-of-type{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:1.25rem;
+
+font-style:italic;
+
+line-height:1.7;
+
+color:rgba(255,255,255,.88);
+
+}
+
+.footer-scripture p:last-of-type{
+
+font-family:"Cinzel",serif;
+
+font-size:.9rem;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:var(--gold-light);
+
+margin-top:20px;
+
+}
+
+.footer-brand p{
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+max-width:320px;
+
+color:rgba(255,255,255,.82);
 
 }
 
