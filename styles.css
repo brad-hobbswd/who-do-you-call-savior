@@ -539,15 +539,17 @@ width:100%;
 
 z-index:1000;
 
-padding:20px 0;
+padding:18px 0;
 
-background:rgba(35,56,76,.35);
+background:rgba(248,245,239,.82);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(16px);
 
--webkit-backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(16px);
 
-transition:all .35s ease;
+border-bottom:1px solid rgba(200,164,90,.20);
+
+transition:.35s ease;
 
 }
 
@@ -571,13 +573,15 @@ NAVBAR
 
 .navbar{
 
+max-width:1200px;
+
+margin:auto;
+
 display:flex;
 
 align-items:center;
 
 justify-content:space-between;
-
-gap:40px;
 
 }
 
@@ -589,15 +593,16 @@ LOGO
 
 font-family:"Cinzel",serif;
 
-font-size:1.4rem;
+font-size:2rem;
 
-font-weight:700;
+font-weight:600;
 
 letter-spacing:2px;
 
 color:var(--navy);
 
 transition:var(--transition);
+text-shadow:none;
 
 }
 
@@ -946,7 +951,9 @@ min-height:700px;
 
 overflow:hidden;
 
-background:var(--navy);
+padding-top:82px;
+
+background:var(--cream);
 
 }
 
@@ -958,9 +965,7 @@ width:100%;
 
 height:100%;
 
-object-fit:cover;
-
-object-position:center;
+object-fit:contain;
 
 }
 
