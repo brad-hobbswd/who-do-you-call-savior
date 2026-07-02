@@ -539,17 +539,19 @@ width:100%;
 
 z-index:1000;
 
-padding:18px 0;
+padding:16px 0;
 
-background:rgba(248,245,239,.82);
+background:rgba(248,245,239,.88);
 
-backdrop-filter:blur(16px);
+backdrop-filter:blur(14px);
 
--webkit-backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(14px);
 
 border-bottom:1px solid rgba(200,164,90,.20);
 
-transition:.35s ease;
+box-shadow:0 6px 25px rgba(0,0,0,.06);
+
+transition:all .35s ease;
 
 }
 
@@ -557,13 +559,9 @@ transition:.35s ease;
 
 background:rgba(248,245,239,.96);
 
-backdrop-filter:blur(18px);
+padding:12px 0;
 
--webkit-backdrop-filter:blur(18px);
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-padding:14px 0;
+box-shadow:0 10px 35px rgba(0,0,0,.10);
 
 }
 
@@ -593,16 +591,15 @@ LOGO
 
 font-family:"Cinzel",serif;
 
-font-size:2rem;
+font-size:1.4rem;
 
-font-weight:600;
+font-weight:700;
 
 letter-spacing:2px;
 
 color:var(--navy);
 
 transition:var(--transition);
-text-shadow:none;
 
 }
 
@@ -636,7 +633,7 @@ font-weight:600;
 
 letter-spacing:.5px;
 
-color:var(--white);
+color:var(--navy);
 
 transition:var(--transition);
 
@@ -682,7 +679,7 @@ width:100%;
 
 .nav-links a:hover{
 
-color:var(--gold-light);
+color:var(--gold-dark);
 
 }
 
