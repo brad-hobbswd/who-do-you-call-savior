@@ -1935,14 +1935,12 @@ ANIMATIONS
 
 .fade-up{
 
-opacity:0;
+opacity:1;
 
-transform:translateY(40px);
+transform:none;
 
 transition:
-
 opacity .8s ease,
-
 transform .8s ease;
 
 }
