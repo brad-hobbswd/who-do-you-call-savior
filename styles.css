@@ -1118,6 +1118,56 @@ flex-wrap:wrap;
 }
 
 /*======================================================
+FEATURED CHAPTER QUESTIONS
+======================================================*/
+
+.chapter-question{
+
+max-width:12ch;
+
+margin:4rem auto;
+
+text-align:center;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:clamp(3rem,7vw,5rem);
+
+font-weight:600;
+
+font-style:italic;
+
+line-height:1.1;
+
+color:var(--navy);
+
+text-wrap:balance;
+
+}
+
+.chapter-question::after{
+
+content:"";
+
+display:block;
+
+width:100px;
+
+height:3px;
+
+margin:1.5rem auto 0;
+
+background:linear-gradient(
+90deg,
+transparent,
+var(--gold),
+transparent);
+
+border-radius:999px;
+
+}
+
+/*======================================================
 JOURNEY
 ======================================================*/
 
@@ -2141,7 +2191,13 @@ margin:0 auto;
 
 text-align:center;
 
-margin-bottom:40px;
+margin-bottom:2rem;
+
+}
+
+.chapter-content > h2:first-child{
+
+margin-bottom:2.5rem;
 
 }
 
