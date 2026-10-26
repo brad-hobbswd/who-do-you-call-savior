@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brad-hobbswd.github.io/who-do-you-call-savior/sitemap.xml
