@@ -2428,3 +2428,350 @@ padding:30px;
 }
 
 }
+
+
+/*======================================================
+MOBILE AND TABLET SPACING REFINEMENT
+Keep reading pages compact, readable, and consistent.
+Applies site-wide through this shared stylesheet.
+======================================================*/
+
+@media screen and (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  .container {
+    width: min(91%, 1180px);
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .site-header.scrolled {
+    padding: 8px 0;
+  }
+
+  .navbar {
+    width: 91%;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding-top: 70px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .series-hero {
+    padding-top: 70px;
+  }
+
+  .welcome {
+    padding: 42px 0;
+  }
+
+  .welcome-text {
+    font-size: clamp(1.55rem, 5vw, 2.2rem);
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-divider {
+    margin: 34px auto;
+  }
+
+  .lead {
+    font-size: 1.55rem;
+    margin: 24px 0;
+  }
+
+  .chapter-question {
+    margin: 2rem auto;
+    font-size: clamp(2.4rem, 9vw, 4rem);
+  }
+
+  .topic-grid,
+  .resource-grid,
+  .preview-grid,
+  .footer-grid {
+    gap: 22px;
+    margin-top: 30px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .button-group {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .page-header {
+    padding: 116px 0 42px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.1rem, 7vw, 3.2rem);
+    margin: 10px 0 16px;
+  }
+
+  .page-header .subtitle {
+    font-size: 1.45rem;
+  }
+
+  .page-intro {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .contents-grid {
+    margin-top: 38px;
+    gap: 28px;
+  }
+
+  .chapter-card {
+    padding-bottom: 28px;
+  }
+
+  .chapter-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .chapter-content p {
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+
+  .chapter-scripture {
+    margin: 34px 0;
+    padding: 24px;
+  }
+
+  .chapter-closing {
+    margin-top: 42px;
+  }
+
+  .chapter-nav-grid {
+    gap: 14px;
+  }
+
+  .chapter-nav {
+    padding: 22px;
+  }
+
+  .site-footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-grid {
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    padding: 88px 26px 30px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .page-header {
+    padding-top: 106px;
+    padding-bottom: 34px;
+  }
+
+  .page-header .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .chapter-scripture {
+    padding: 20px;
+  }
+
+  .chapter-nav {
+    padding: 18px;
+  }
+}
+
+/*======================================================
+LANDSCAPE REFINEMENT
+Avoid tall hero blocks and oversized vertical gaps on
+phones and tablets held sideways.
+======================================================*/
+
+@media screen and (orientation: landscape) and (max-width: 1200px) and (max-height: 900px) {
+  html {
+    scroll-padding-top: 68px;
+  }
+
+  .site-header {
+    padding: 8px 0;
+  }
+
+  .site-header.scrolled {
+    padding: 6px 0;
+  }
+
+  .navbar {
+    width: 94%;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding-top: 64px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-height: 68vh;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .series-hero {
+    padding-top: 64px;
+  }
+
+  .series-hero img {
+    width: auto;
+    max-width: min(100%, 820px);
+    max-height: 68vh;
+    object-fit: contain;
+  }
+
+  section,
+  .welcome {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .section-header {
+    margin-bottom: 24px;
+  }
+
+  .section-divider {
+    margin: 26px auto;
+  }
+
+  .page-header {
+    padding-top: 100px;
+    padding-bottom: 32px;
+  }
+
+  .contents-grid {
+    margin-top: 30px;
+    gap: 24px;
+  }
+
+  .chapter-scripture {
+    margin: 28px 0;
+    padding: 24px;
+  }
+
+  .chapter-closing {
+    margin-top: 38px;
+  }
+
+  .site-footer {
+    padding-top: 42px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .mobile-menu {
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    padding: 72px 26px 22px;
+  }
+
+  .mobile-menu a {
+    padding: 11px 0;
+    font-size: .95rem;
+  }
+
+  .hero {
+    padding-top: 58px;
+  }
+
+  .hero img,
+  .series-hero img {
+    max-height: 62vh;
+  }
+
+  .series-hero {
+    padding-top: 58px;
+  }
+
+  .page-header {
+    padding-top: 88px;
+    padding-bottom: 24px;
+  }
+
+  section,
+  .welcome {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .chapter-content p {
+    margin-bottom: 14px;
+  }
+}
