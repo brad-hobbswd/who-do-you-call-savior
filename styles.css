@@ -2775,3 +2775,44 @@ phones and tablets held sideways.
     margin-bottom: 14px;
   }
 }
+
+/*======================================================
+HOMEPAGE BANNER REFINEMENT
+Keep the artwork comfortably inside the page margins
+instead of stretching it across the full viewport.
+======================================================*/
+
+.hero{
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  width:100%;
+  height:auto;
+  min-height:0;
+  padding:82px 0 0;
+  overflow:visible;
+}
+
+.hero img{
+  display:block;
+  width:min(92%, 1100px);
+  max-width:1100px;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  margin:0 auto;
+}
+
+@media(max-width:768px){
+  .hero{
+    padding-top:76px;
+  }
+
+  .hero img{
+    width:92%;
+    max-width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+}
