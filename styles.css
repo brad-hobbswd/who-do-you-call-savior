@@ -936,33 +936,56 @@ PART 3
 HERO
 ======================================================*/
 
-.hero{
+/* HOMEPAGE BANNER
+   Sits below the fixed navigation without creating a full-screen hero section. */
 
-padding:0;
+.home-banner{
 
-margin:0;
+  width:100%;
 
-height:100vh;
+  padding:112px 0 28px;
 
-min-height:700px;
+  margin:0;
 
-overflow:hidden;
-
-padding-top:82px;
-
-background:var(--cream);
+  background:transparent;
 
 }
 
-.hero img{
+.home-banner img{
 
-display:block;
+  display:block;
 
-width:100%;
+  width:min(92%, 1100px);
 
-height:100%;
+  max-width:1100px;
 
-object-fit:contain;
+  height:auto;
+
+  object-fit:contain;
+
+  margin:0 auto;
+
+  border-radius:22px;
+
+  box-shadow:0 14px 36px rgba(15, 30, 45, 0.16);
+
+}
+
+@media(max-width:768px){
+
+  .home-banner{
+
+    padding:96px 0 22px;
+
+  }
+
+  .home-banner img{
+
+    width:94%;
+
+    border-radius:16px;
+
+  }
 
 }
 
