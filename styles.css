@@ -5195,3 +5195,335 @@ AUTHOR PAGE: READER SUPPORT AND NEXT STEPS
     max-width:270px;
   }
 }
+
+
+/*======================================================
+THE QUESTION SERIES: EDITORIAL LANDING PAGE
+======================================================*/
+
+.series-page{
+  background:#fbf9f5;
+}
+
+.series-page .series-hero{
+  padding:82px 0 0;
+  background:#f8f5ef;
+}
+
+.series-page .series-hero img{
+  width:min(100%,1120px);
+  max-width:1120px;
+  height:auto;
+  object-fit:contain;
+}
+
+.series-page .welcome{
+  padding:40px 0 42px;
+  background:#fff;
+  text-align:center;
+}
+
+.series-page .welcome-text{
+  margin:0;
+  color:#23384c;
+  font-family:"Cinzel",serif;
+  font-size:clamp(1.5rem,3vw,2.3rem);
+  line-height:1.45;
+  letter-spacing:.025em;
+}
+
+.series-page .welcome-text span{
+  display:block;
+  color:#987332;
+}
+
+.series-page .scripture{
+  padding:48px 0 54px;
+  background:#23384c;
+  color:#fffaf0;
+  text-align:center;
+}
+
+.series-page .scripture blockquote{
+  max-width:850px;
+  color:#fffaf0;
+  font-size:clamp(1.35rem,2.5vw,1.9rem);
+  line-height:1.65;
+  text-wrap:balance;
+}
+
+.series-page .scripture cite{
+  color:#e2c886;
+}
+
+.series-page .introduction,
+.series-page .purpose{
+  padding:76px 0 82px;
+  background:#fff;
+}
+
+.series-page .introduction > .container,
+.series-page .purpose > .container{
+  width:min(1000px,92%);
+}
+
+.series-page .introduction .section-header,
+.series-page .journey .section-header,
+.series-page .purpose .section-header{
+  max-width:800px;
+  margin:0 auto 34px;
+  text-align:center;
+}
+
+.series-page .introduction .section-header h2,
+.series-page .journey .section-header h2,
+.series-page .purpose .section-header h2{
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  line-height:1.2;
+  text-wrap:balance;
+}
+
+.series-page .introduction > .container > p:not(.eyebrow),
+.series-page .purpose > .container > p:not(.eyebrow){
+  max-width:800px;
+  margin:0 auto 19px;
+  color:#555b61;
+  font-size:1.02rem;
+  line-height:1.9;
+}
+
+.series-page .introduction .lead{
+  margin:24px auto;
+  color:#987332;
+  font-size:2.35rem;
+}
+
+.series-page .journey{
+  padding:82px 0 90px;
+  background:#f4efe7;
+}
+
+.series-page .journey > .container{
+  width:min(1120px,92%);
+}
+
+.series-page .journey .section-intro{
+  max-width:780px;
+  margin:0 auto;
+  color:#62666b;
+  font-size:1rem;
+  line-height:1.85;
+  text-align:center;
+}
+
+.series-page .series-reading-order{
+  width:min(850px,100%);
+  margin:28px auto 0;
+  padding:19px 24px;
+  border-left:3px solid #c7a252;
+  border-radius:0 12px 12px 0;
+  background:#fffdfa;
+}
+
+.series-page .reading-order-label{
+  display:block;
+  margin-bottom:7px;
+  color:#987332;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+
+.series-page .series-reading-order p{
+  margin:0;
+  color:#555b61;
+  font-size:.94rem;
+  line-height:1.75;
+}
+
+.series-page .journey .topic-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+  gap:20px;
+  margin:36px 0 0;
+}
+
+.series-page .journey .topic-grid .card{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-width:0;
+  min-height:100%;
+  padding:28px 25px 25px;
+  border:1px solid #e5dac8;
+  border-radius:16px;
+  background:#fffdfa;
+  box-shadow:0 9px 26px rgba(35,56,76,.055);
+}
+
+.series-page .journey .topic-grid .card .eyebrow{
+  margin-bottom:12px;
+  color:#987332;
+  font-size:.72rem;
+  letter-spacing:1.4px;
+}
+
+.series-page .journey .topic-grid .card h3{
+  margin:0 0 15px;
+  color:#23384c;
+  font-family:"Cinzel",serif;
+  font-size:1.24rem;
+  line-height:1.4;
+  text-align:left;
+}
+
+.series-page .journey .topic-grid .card > p:not(.eyebrow){
+  color:#62666b;
+  font-size:.94rem;
+  line-height:1.78;
+  text-align:left;
+}
+
+.series-page .journey .topic-grid .card .button-group{
+  width:100%;
+  margin-top:auto;
+  padding-top:12px;
+  justify-content:flex-start;
+}
+
+.series-page .journey .topic-grid .card .primary-button{
+  width:100%;
+  justify-content:center;
+  text-align:center;
+}
+
+.series-page .purpose{
+  background:#fff;
+}
+
+.series-page .purpose .resource-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin:38px auto 0;
+}
+
+.series-page .purpose .resource-grid .card{
+  padding:24px 22px;
+  border:1px solid #e8e1d7;
+  border-radius:14px;
+  background:#fbf9f5;
+}
+
+.series-page .purpose .resource-grid .card h3{
+  margin-bottom:10px;
+  color:#23384c;
+  font-family:"Cinzel",serif;
+  font-size:1.05rem;
+  line-height:1.4;
+}
+
+.series-page .purpose .resource-grid .card p{
+  margin:0;
+  color:#62666b;
+  font-size:.92rem;
+  line-height:1.75;
+}
+
+.series-page .quote-banner{
+  padding:58px 0;
+  background:linear-gradient(115deg,#1b2b3d,#2b4358);
+  color:#fffaf0;
+  text-align:center;
+}
+
+.series-page .quote-banner blockquote{
+  max-width:820px;
+  margin:0 auto 18px;
+  color:#fffaf0;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:1.35;
+  text-wrap:balance;
+}
+
+.series-page .quote-banner cite{
+  color:#e2c886;
+  font-size:.9rem;
+  line-height:1.7;
+}
+
+.series-page .invitation{
+  padding:78px 0 84px;
+  background:linear-gradient(180deg,#fbf9f5,#f1eadd);
+}
+
+.series-page .invitation .invitation-content{
+  max-width:820px;
+  margin:0 auto;
+}
+
+.series-page .invitation .invitation-content > p:not(.eyebrow){
+  color:#555b61;
+  font-size:1rem;
+  line-height:1.85;
+}
+
+@media(max-width:900px){
+  .series-page .journey .topic-grid,
+  .series-page .purpose .resource-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .series-page .series-hero{
+    padding-top:76px;
+  }
+
+  .series-page .welcome{
+    padding:30px 0;
+  }
+
+  .series-page .scripture{
+    padding:38px 0 42px;
+  }
+
+  .series-page .introduction,
+  .series-page .journey,
+  .series-page .purpose,
+  .series-page .invitation{
+    padding:54px 0 60px;
+  }
+
+  .series-page .journey .topic-grid,
+  .series-page .purpose .resource-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:14px;
+    margin-top:27px;
+  }
+
+  .series-page .journey .topic-grid .card{
+    min-height:0;
+    padding:24px 21px;
+  }
+
+  .series-page .series-reading-order{
+    padding:17px 18px;
+  }
+
+  .series-page .quote-banner{
+    padding:44px 0;
+  }
+
+  .series-page .invitation .button-group{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .series-page .invitation .button-group a{
+    width:100%;
+  }
+}
