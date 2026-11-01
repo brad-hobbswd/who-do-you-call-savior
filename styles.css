@@ -4189,3 +4189,325 @@ behind Who Do You Call Savior?
     width:100%;
   }
 }
+
+
+/*======================================================
+CONTENTS PAGE REDESIGN
+A clear, browsable chapter library with distinct bookends.
+======================================================*/
+
+.contents-page{
+  background:var(--bg);
+}
+
+.contents-page main > .page-header{
+  padding:154px 0 66px;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(199,162,82,.13),transparent 58%),
+    linear-gradient(180deg,#f8f5ef 0%,#fbf9f5 100%);
+  border-bottom:1px solid rgba(199,162,82,.18);
+}
+
+.contents-page .page-header h1{
+  font-size:clamp(2.65rem,5.5vw,4.5rem);
+  line-height:1.12;
+  text-wrap:balance;
+}
+
+.contents-page .page-header .subtitle{
+  margin:8px 0 0;
+  font-size:clamp(1.35rem,2.4vw,1.8rem);
+  letter-spacing:.08em;
+}
+
+.contents-page .page-header .section-divider{
+  width:78px;
+  margin:26px auto 22px;
+}
+
+.contents-page .page-intro{
+  max-width:740px;
+  margin:0 auto;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(1.3rem,2.1vw,1.65rem);
+  line-height:1.55;
+  color:#5d6268;
+  text-wrap:balance;
+}
+
+.contents-page #contents{
+  padding:76px 0 88px;
+  background:#fff;
+}
+
+.contents-page #contents > .container{
+  width:min(1120px,92%);
+}
+
+.contents-page .contents-heading{
+  max-width:780px;
+  margin:0 auto 42px;
+  text-align:center;
+}
+
+.contents-page .contents-heading .eyebrow{
+  margin-bottom:12px;
+}
+
+.contents-page .contents-heading h2{
+  margin-bottom:14px;
+  font-size:clamp(2rem,3.6vw,2.8rem);
+}
+
+.contents-page .contents-heading .contents-description{
+  max-width:680px;
+  margin:0 auto;
+  color:#65696e;
+  font-size:1.02rem;
+  line-height:1.8;
+}
+
+.contents-page .contents-grid{
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  align-items:stretch;
+}
+
+.contents-page .chapter-card{
+  min-width:0;
+  min-height:250px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:28px 30px 26px;
+  margin:0;
+  border:1px solid #e9e1d6;
+  border-radius:17px;
+  background:#fffdfa;
+  box-shadow:0 8px 24px rgba(35,56,76,.045);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+
+.contents-page .chapter-card:hover{
+  padding-left:30px;
+  transform:translateY(-4px);
+  border-color:#d8c49d;
+  box-shadow:0 16px 34px rgba(35,56,76,.09);
+}
+
+.contents-page .chapter-card .chapter-number{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  margin:0 0 17px;
+  padding:5px 11px;
+  border:1px solid #e8dcc5;
+  border-radius:999px;
+  background:#f7f1e6;
+  color:#94702f;
+  font-family:"Inter",sans-serif;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:1.5px;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+
+.contents-page .chapter-card h2{
+  margin:0 0 12px;
+  color:var(--navy);
+  font-family:"Cinzel",serif;
+  font-size:clamp(1.25rem,2vw,1.55rem);
+  line-height:1.3;
+  text-wrap:balance;
+}
+
+.contents-page .chapter-card p:not(.chapter-number){
+  flex:1;
+  margin:0 0 22px;
+  color:#62666b;
+  font-size:.94rem;
+  line-height:1.75;
+}
+
+.contents-page .chapter-card .chapter-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:auto;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:var(--gold-dark);
+  font-family:"Inter",sans-serif;
+  font-size:.9rem;
+  font-weight:700;
+  line-height:1.5;
+}
+
+.contents-page .chapter-card .chapter-link::after{
+  content:"→";
+  font-size:1.15rem;
+  transition:transform .2s ease;
+}
+
+.contents-page .chapter-card .chapter-link:hover{
+  color:var(--navy);
+}
+
+.contents-page .chapter-card .chapter-link:hover::after{
+  transform:translateX(5px);
+}
+
+/* Introduction and Epilogue frame the chapter collection */
+.contents-page .chapter-card.featured-chapter{
+  grid-column:1 / -1;
+  min-height:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:
+    "number link"
+    "title link"
+    "description link";
+  align-items:center;
+  column-gap:36px;
+  padding:30px 36px;
+  border-color:#30485f;
+  background:linear-gradient(115deg,#1b2b3d 0%,#2c455b 100%);
+  box-shadow:0 12px 30px rgba(27,43,61,.12);
+}
+
+.contents-page .chapter-card.featured-chapter:hover{
+  border-color:#c7a252;
+}
+
+.contents-page .chapter-card.featured-chapter .chapter-number{
+  grid-area:number;
+  justify-self:start;
+  margin:0 0 10px;
+  border-color:rgba(226,200,134,.38);
+  background:rgba(226,200,134,.12);
+  color:#e2c886;
+}
+
+.contents-page .chapter-card.featured-chapter h2{
+  grid-area:title;
+  margin:0 0 8px;
+  color:#fffaf0;
+  font-size:clamp(1.45rem,2.5vw,1.9rem);
+}
+
+.contents-page .chapter-card.featured-chapter p:not(.chapter-number){
+  grid-area:description;
+  max-width:760px;
+  margin:0;
+  color:rgba(255,250,240,.78);
+}
+
+.contents-page .chapter-card.featured-chapter .chapter-link{
+  grid-area:link;
+  justify-self:end;
+  align-self:center;
+  white-space:nowrap;
+  color:#e2c886;
+}
+
+.contents-page .chapter-card.featured-chapter .chapter-link:hover{
+  color:#fff;
+}
+
+.contents-page .invitation{
+  padding:76px 0 84px;
+}
+
+.contents-page .invitation-content{
+  max-width:790px;
+}
+
+.contents-page .invitation-content h2{
+  text-wrap:balance;
+}
+
+@media(max-width:760px){
+  .contents-page main > .page-header{
+    padding:126px 0 48px;
+  }
+
+  .contents-page #contents{
+    padding:54px 0 62px;
+  }
+
+  .contents-page .contents-heading{
+    margin-bottom:30px;
+  }
+
+  .contents-page .contents-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:15px;
+  }
+
+  .contents-page .chapter-card{
+    min-height:0;
+    padding:23px 22px;
+  }
+
+  .contents-page .chapter-card:hover{
+    padding-left:22px;
+  }
+
+  .contents-page .chapter-card.featured-chapter{
+    grid-column:auto;
+    grid-template-columns:minmax(0,1fr);
+    grid-template-areas:
+      "number"
+      "title"
+      "description"
+      "link";
+    gap:0;
+    padding:25px 23px;
+  }
+
+  .contents-page .chapter-card.featured-chapter .chapter-number{
+    margin-bottom:12px;
+  }
+
+  .contents-page .chapter-card.featured-chapter .chapter-link{
+    justify-self:start;
+    margin-top:18px;
+  }
+
+  .contents-page .chapter-card h2{
+    font-size:1.28rem;
+  }
+
+  .contents-page .chapter-card p:not(.chapter-number){
+    margin-bottom:18px;
+  }
+
+  .contents-page .invitation{
+    padding:56px 0 62px;
+  }
+}
+
+@media(max-width:380px){
+  .contents-page #contents > .container{
+    width:calc(100% - 34px);
+  }
+
+  .contents-page .chapter-card{
+    padding:21px 19px;
+  }
+
+  .contents-page .chapter-card:hover{
+    padding-left:19px;
+  }
+
+  .contents-page .chapter-card.featured-chapter{
+    padding:23px 20px;
+  }
+}
