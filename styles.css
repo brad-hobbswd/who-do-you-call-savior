@@ -6269,3 +6269,53 @@ CONTACT PAGE: A QUIETER, MORE PERSONAL READING EXPERIENCE
     padding-top: 18px;
   }
 }
+
+
+/* Legal information pages */
+.legal-page main { background: var(--surface, #fbfaf7); }
+.legal-content { padding: 58px 0 100px; }
+.legal-document {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(26px, 5vw, 54px);
+  background: #fff;
+  border: 1px solid rgba(30,45,60,.09);
+  box-shadow: 0 16px 45px rgba(25,35,45,.055);
+}
+.legal-document > p:first-child {
+  margin: 0 0 34px;
+  color: var(--gold, #a98650);
+  font-size: .88rem;
+  letter-spacing: .04em;
+}
+.legal-document h2 {
+  margin: 34px 0 12px;
+  color: var(--navy, #17283b);
+  font-family: "Cinzel", serif;
+  font-size: 1.12rem;
+  line-height: 1.5;
+}
+.legal-document h2:first-of-type { margin-top: 0; }
+.legal-document p {
+  margin: 0 0 18px;
+  color: var(--text, #41464d);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+.legal-document a {
+  color: var(--navy, #17283b);
+  text-decoration-color: var(--gold, #a98650);
+  text-underline-offset: 3px;
+}
+.site-footer .footer-grid {
+  grid-template-columns: minmax(230px, 1.35fr) minmax(130px, .7fr) minmax(130px, .7fr) minmax(220px, 1fr);
+}
+@media (max-width: 1050px) {
+  .site-footer .footer-grid { grid-template-columns: 1.2fr .8fr; }
+  .site-footer .footer-scripture { grid-column: auto; }
+}
+@media (max-width: 600px) {
+  .site-footer .footer-grid { grid-template-columns: 1fr; }
+  .legal-content { padding: 34px 0 65px; }
+  .legal-document { padding: 25px 21px; }
+}
