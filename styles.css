@@ -4511,3 +4511,391 @@ A clear, browsable chapter library with distinct bookends.
     padding:23px 20px;
   }
 }
+
+
+/*======================================================
+RESOURCES PAGE: PRACTICAL HELP AND CLEAR PATHWAYS
+======================================================*/
+
+.resources-page main > .page-header{
+  padding:150px 0 68px;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(199,162,82,.14),transparent 58%),
+    linear-gradient(180deg,#f8f5ef 0%,#fbf9f5 100%);
+  border-bottom:1px solid rgba(199,162,82,.18);
+}
+
+.resources-page .page-header h1{
+  font-size:clamp(2.5rem,5.2vw,4.25rem);
+  text-wrap:balance;
+}
+
+.resources-page .page-intro{
+  max-width:780px;
+  margin:0 auto;
+  font-size:1.08rem;
+  line-height:1.85;
+  text-wrap:pretty;
+}
+
+.resources-page .bible-first{
+  padding:58px 0 64px;
+  background:#23384c;
+  color:#fffaf0;
+  text-align:center;
+}
+
+.resources-page .bible-first .invitation-content{
+  width:min(820px,92%);
+}
+
+.resources-page .bible-first h2{
+  color:#fffaf0;
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  text-wrap:balance;
+}
+
+.resources-page .bible-first .section-divider{
+  width:76px;
+  margin:22px auto 28px;
+}
+
+.resources-page .bible-first p:not(.eyebrow){
+  color:rgba(255,250,240,.82);
+  font-size:1rem;
+  line-height:1.9;
+}
+
+.resources-page .resource-help{
+  padding:78px 0 84px;
+  background:#f4efe7;
+}
+
+.resources-page .resource-help > .container{
+  width:min(1120px,92%);
+}
+
+.resources-page .resource-help .section-header{
+  max-width:790px;
+  margin:0 auto 40px;
+  text-align:center;
+}
+
+.resources-page .resource-help .section-header h2{
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  text-wrap:balance;
+}
+
+.resources-page .resource-help .section-intro{
+  max-width:700px;
+  margin:18px auto 0;
+  color:#64686d;
+  line-height:1.8;
+}
+
+.resources-page .help-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:17px;
+}
+
+.resources-page .help-card{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:25px 27px 23px;
+  border:1px solid #e5dac8;
+  border-radius:16px;
+  background:#fffdfa;
+  color:inherit;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(35,56,76,.045);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+
+.resources-page .help-card:hover,
+.resources-page .help-card:focus-visible{
+  transform:translateY(-3px);
+  border-color:#c7a252;
+  box-shadow:0 15px 30px rgba(35,56,76,.09);
+  outline:none;
+}
+
+.resources-page .help-label{
+  display:inline-block;
+  margin-bottom:12px;
+  color:#987332;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:1.2px;
+  line-height:1.4;
+  text-transform:uppercase;
+}
+
+.resources-page .help-card h3{
+  margin:0 0 9px;
+  color:var(--navy);
+  font-family:"Cinzel",serif;
+  font-size:1.2rem;
+  line-height:1.35;
+}
+
+.resources-page .help-card p{
+  margin:0 0 17px;
+  color:#62666b;
+  font-size:.94rem;
+  line-height:1.75;
+}
+
+.resources-page .help-action{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:auto;
+  color:var(--gold-dark);
+  font-size:.88rem;
+  font-weight:700;
+}
+
+.resources-page .help-action span{
+  transition:transform .2s ease;
+}
+
+.resources-page .help-card:hover .help-action span{
+  transform:translateX(4px);
+}
+
+.resources-page .resource-library{
+  padding:78px 0 84px;
+  background:#fff;
+}
+
+.resources-page .resource-library > .container,
+.resources-page .daily-walk > .container,
+.resources-page .featured-scripture > .container,
+.resources-page .resource-invitation > .container{
+  width:min(1100px,92%);
+}
+
+.resources-page .resource-library .section-header{
+  max-width:760px;
+  margin:0 auto 38px;
+  text-align:center;
+}
+
+.resources-page .resource-library .section-header h2,
+.resources-page .daily-walk .section-header h2{
+  font-size:clamp(2rem,3.4vw,2.7rem);
+  text-wrap:balance;
+}
+
+.resources-page .resource-library .resource-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin:0;
+}
+
+.resources-page .resource-library .card{
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:25px 25px 23px;
+  border:1px solid #e8e1d7;
+  border-radius:15px;
+  background:#fffdfa;
+  box-shadow:0 7px 22px rgba(35,56,76,.04);
+}
+
+.resources-page .resource-library .card h3{
+  margin-bottom:12px;
+  color:var(--navy);
+  font-size:1.2rem;
+}
+
+.resources-page .resource-library .card p{
+  flex:1;
+  margin-bottom:18px;
+  color:#62666b;
+  font-size:.93rem;
+  line-height:1.75;
+}
+
+.resources-page .resource-library .card .secondary-button{
+  margin-top:auto;
+}
+
+.resources-page .daily-walk{
+  padding:76px 0 82px;
+  background:#f4efe7;
+}
+
+.resources-page .daily-walk .section-header{
+  max-width:780px;
+  margin:0 auto 32px;
+  text-align:center;
+}
+
+.resources-page .daily-walk .section-intro{
+  max-width:780px;
+  margin:0 auto 34px;
+  color:#62666b;
+  line-height:1.85;
+  text-align:center;
+}
+
+.resources-page .daily-walk .resource-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin:0;
+}
+
+.resources-page .daily-walk .card{
+  padding:23px 24px;
+  border:1px solid #e5dac8;
+  border-radius:14px;
+  background:#fffdfa;
+}
+
+.resources-page .daily-walk .card h3{
+  margin-bottom:9px;
+  color:var(--navy);
+  font-size:1.12rem;
+}
+
+.resources-page .daily-walk .card p{
+  margin:0;
+  color:#62666b;
+  font-size:.92rem;
+  line-height:1.75;
+}
+
+.resources-page .featured-scripture{
+  padding:70px 0;
+  background:#23384c;
+  color:#fffaf0;
+  text-align:center;
+}
+
+.resources-page .featured-scripture h2{
+  color:#fffaf0;
+  font-size:clamp(2rem,3.4vw,2.7rem);
+}
+
+.resources-page .featured-scripture .chapter-scripture{
+  max-width:850px;
+  margin:30px auto;
+  padding:30px 34px;
+  border:1px solid rgba(226,200,134,.32);
+  border-radius:18px;
+  background:rgba(255,255,255,.055);
+}
+
+.resources-page .featured-scripture blockquote{
+  color:#fffaf0;
+  font-size:clamp(1.45rem,2.5vw,2rem);
+  line-height:1.55;
+}
+
+.resources-page .featured-scripture cite{
+  color:#e2c886;
+}
+
+.resources-page .featured-scripture .invitation-content > p:last-child{
+  max-width:760px;
+  margin:0 auto;
+  color:rgba(255,250,240,.82);
+  line-height:1.85;
+}
+
+.resources-page .resource-invitation{
+  padding:78px 0 86px;
+  background:linear-gradient(180deg,#fbf9f5 0%,#f1eadd 100%);
+  text-align:center;
+}
+
+.resources-page .resource-invitation .invitation-content{
+  max-width:800px;
+  margin:0 auto;
+}
+
+.resources-page .resource-invitation h2{
+  font-size:clamp(2rem,3.4vw,2.8rem);
+  text-wrap:balance;
+}
+
+.resources-page .resource-invitation p{
+  color:#555b61;
+  line-height:1.85;
+}
+
+@media(max-width:900px){
+  .resources-page .resource-library .resource-grid,
+  .resources-page .daily-walk .resource-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .resources-page main > .page-header{
+    padding:124px 0 48px;
+  }
+
+  .resources-page .page-intro{
+    font-size:1rem;
+    line-height:1.78;
+  }
+
+  .resources-page .bible-first{
+    padding:46px 0 50px;
+  }
+
+  .resources-page .resource-help,
+  .resources-page .resource-library,
+  .resources-page .daily-walk,
+  .resources-page .resource-invitation{
+    padding:54px 0 60px;
+  }
+
+  .resources-page .resource-help .section-header{
+    margin-bottom:27px;
+  }
+
+  .resources-page .help-grid,
+  .resources-page .resource-library .resource-grid,
+  .resources-page .daily-walk .resource-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:13px;
+  }
+
+  .resources-page .help-card{
+    padding:22px 21px;
+  }
+
+  .resources-page .resource-library .card{
+    min-height:0;
+    padding:22px 21px;
+  }
+
+  .resources-page .daily-walk .card{
+    padding:21px;
+  }
+
+  .resources-page .featured-scripture{
+    padding:52px 0;
+  }
+
+  .resources-page .featured-scripture .chapter-scripture{
+    padding:23px 19px;
+  }
+
+  .resources-page .resource-invitation .button-group{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .resources-page .resource-invitation .button-group a{
+    width:100%;
+  }
+}
