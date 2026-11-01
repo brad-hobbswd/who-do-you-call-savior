@@ -2816,3 +2816,331 @@ instead of stretching it across the full viewport.
     object-fit:contain;
   }
 }
+
+/*======================================================
+SITE-WIDE SPACING AND ALIGNMENT SYSTEM
+Consistent page margins, readable content widths, and
+balanced section spacing across every page.
+======================================================*/
+
+:root{
+  --page-gutter: clamp(22px, 5vw, 64px);
+  --reading-width: 780px;
+  --content-width: 1120px;
+}
+
+.container{
+  width: min(var(--content-width), calc(100% - (var(--page-gutter) * 2)));
+  margin-inline: auto;
+}
+
+section{
+  padding: clamp(64px, 7vw, 92px) 0;
+}
+
+.page-header{
+  padding: clamp(132px, 15vw, 164px) 0 64px;
+}
+
+.page-header .container,
+.error-content{
+  width: min(var(--content-width), calc(100% - (var(--page-gutter) * 2)));
+  margin-inline: auto;
+}
+
+.page-intro{
+  width: min(100%, var(--reading-width));
+  margin: 24px auto 0;
+  line-height: 1.85;
+}
+
+.chapter-content,
+.preview-content,
+.invitation-content,
+.error-content{
+  max-width: var(--reading-width);
+  margin-inline: auto;
+}
+
+.chapter-content p,
+.book-introduction p,
+.author-story p,
+.author-calling p,
+.writing-ministry p,
+.learning-prayer p,
+.how-to-pray p,
+.study-library p,
+.study-encouragement p,
+.daily-walk p,
+.bible-first p,
+.resource-library p,
+.contact-introduction p{
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.chapter-content p{
+  font-size: 1.06rem;
+  margin-bottom: 1.45rem;
+}
+
+.section-header{
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.section-header .section-divider,
+.page-header .section-divider{
+  margin: 30px auto;
+}
+
+.topic-grid,
+.resource-grid,
+.contents-grid,
+.chapter-nav-grid{
+  gap: clamp(18px, 2.5vw, 28px);
+}
+
+.topic-grid,
+.resource-grid{
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.card{
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.preview-grid{
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(36px, 6vw, 72px);
+}
+
+.preview-content{
+  max-width: 680px;
+}
+
+.chapter-scripture{
+  margin: 44px 0;
+  padding: clamp(26px, 4vw, 40px);
+}
+
+.chapter-navigation{
+  padding: 64px 0;
+}
+
+.chapter-nav{
+  height: 100%;
+  padding: clamp(22px, 3vw, 32px);
+}
+
+.contents-grid{
+  width: min(100%, 860px);
+  margin: 52px auto 0;
+}
+
+.chapter-card{
+  padding-bottom: 32px;
+}
+
+.contact-form-section,
+.contact-info,
+.contact-invitation{
+  padding: clamp(56px, 6vw, 76px) 0;
+}
+
+.contact-form{
+  width: min(100%, 780px);
+  padding: clamp(22px, 4vw, 38px);
+}
+
+.site-footer{
+  padding: 68px 0 26px;
+}
+
+.footer-grid{
+  gap: clamp(28px, 4vw, 48px);
+  margin-bottom: 42px;
+}
+
+.footer-bottom{
+  padding-top: 24px;
+}
+
+/* Tablet spacing */
+@media(max-width: 992px){
+  :root{
+    --page-gutter: 28px;
+  }
+
+  section{
+    padding: 64px 0;
+  }
+
+  .preview-grid{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 34px;
+  }
+
+  .page-header{
+    padding: 132px 0 54px;
+  }
+
+  .footer-grid{
+    gap: 28px;
+  }
+}
+
+/* Mobile spacing */
+@media(max-width: 768px){
+  :root{
+    --page-gutter: 22px;
+  }
+
+  .container,
+  .page-header .container,
+  .error-content{
+    width: calc(100% - (var(--page-gutter) * 2));
+  }
+
+  section{
+    padding: 48px 0;
+  }
+
+  .page-header{
+    padding: 112px 0 38px;
+  }
+
+  .page-header .section-divider,
+  .section-header .section-divider{
+    margin: 24px auto;
+  }
+
+  .page-intro{
+    margin-top: 18px;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .chapter-content,
+  .preview-content,
+  .invitation-content{
+    width: 100%;
+  }
+
+  .chapter-content p,
+  .book-introduction p,
+  .author-story p,
+  .author-calling p,
+  .writing-ministry p,
+  .learning-prayer p,
+  .how-to-pray p,
+  .study-library p,
+  .study-encouragement p,
+  .daily-walk p,
+  .bible-first p,
+  .resource-library p,
+  .contact-introduction p{
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.1rem;
+  }
+
+  .section-header{
+    margin-bottom: 28px;
+  }
+
+  .topic-grid,
+  .resource-grid,
+  .contents-grid,
+  .chapter-nav-grid{
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .card{
+    padding: 22px;
+  }
+
+  .preview-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .preview-content{
+    text-align: left;
+  }
+
+  .chapter-scripture{
+    margin: 30px 0;
+    padding: 24px 20px;
+  }
+
+  .chapter-navigation{
+    padding: 42px 0;
+  }
+
+  .chapter-nav{
+    padding: 20px;
+  }
+
+  .contact-form-section,
+  .contact-info,
+  .contact-invitation{
+    padding: 44px 0;
+  }
+
+  .contact-form{
+    margin-top: 24px;
+    padding: 22px;
+  }
+
+  .site-footer{
+    padding: 46px 0 22px;
+  }
+
+  .footer-grid{
+    gap: 26px;
+    margin-bottom: 28px;
+  }
+
+  .footer-bottom{
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media(max-width: 480px){
+  :root{
+    --page-gutter: 18px;
+  }
+
+  section{
+    padding: 40px 0;
+  }
+
+  .page-header{
+    padding: 104px 0 32px;
+  }
+
+  .chapter-content p{
+    font-size: .98rem;
+    line-height: 1.78;
+  }
+
+  .card,
+  .chapter-nav{
+    padding: 18px;
+  }
+
+  .button-group{
+    gap: 12px;
+  }
+
+  .button-group a{
+    max-width: 100%;
+  }
+
+  .contact-form{
+    padding: 18px;
+  }
+}
