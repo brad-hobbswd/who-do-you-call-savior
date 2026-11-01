@@ -2819,6 +2819,8 @@ instead of stretching it across the full viewport.
   max-height:none;
   object-fit:contain;
   margin:0 auto;
+  border-radius:22px;
+  box-shadow:0 14px 36px rgba(15, 30, 45, 0.16);
 }
 
 @media(max-width:768px){
