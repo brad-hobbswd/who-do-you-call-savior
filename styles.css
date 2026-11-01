@@ -3144,3 +3144,427 @@ section{
     padding: 18px;
   }
 }
+
+
+/*======================================================
+FINAL LAYOUT POLISH
+Unify alignment, page rhythm, and content widths across
+homepage, reading pages, resources, and information pages.
+======================================================*/
+
+:root{
+  --page-gutter: clamp(20px, 4.5vw, 58px);
+  --content-width: 1160px;
+  --reading-width: 760px;
+  --section-space: clamp(68px, 7vw, 96px);
+  --section-space-small: clamp(48px, 5vw, 68px);
+}
+
+/* One consistent horizontal grid */
+.container,
+.page-header .container,
+.site-header .container,
+.site-footer .container{
+  width: min(var(--content-width), calc(100% - 2 * var(--page-gutter)));
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar{
+  width: 100%;
+  max-width: none;
+  min-height: 48px;
+  gap: 24px;
+}
+
+/* Balanced vertical rhythm */
+main > section:not(.hero):not(.series-hero){
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+main > .page-header{
+  padding-top: clamp(136px, 14vw, 168px);
+  padding-bottom: clamp(48px, 5vw, 68px);
+}
+
+main > .page-header + section{
+  padding-top: var(--section-space);
+}
+
+.section-header{
+  width: min(100%, 850px);
+  margin: 0 auto clamp(34px, 4vw, 50px);
+  text-align: center;
+}
+
+.section-header h2,
+.page-header h1,
+.page-header .subtitle{
+  text-wrap: balance;
+}
+
+.page-header .eyebrow,
+.section-header .eyebrow{
+  margin-bottom: 14px;
+}
+
+.page-intro{
+  width: min(100%, var(--reading-width));
+  max-width: var(--reading-width);
+  margin: 24px auto 0;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+/* Reading columns share the same measure and alignment */
+.chapter-content,
+.preview-content,
+.invitation-content,
+.error-content,
+.book-introduction .preview-content,
+.contact-introduction .preview-content{
+  width: 100%;
+  max-width: var(--reading-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chapter-content{
+  padding-inline: 0;
+}
+
+.chapter-content h2{
+  margin-top: clamp(34px, 4vw, 48px);
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+
+.chapter-content h2:first-child{
+  margin-top: 0;
+}
+
+.chapter-content p,
+.book-introduction p,
+.author-story p,
+.author-calling p,
+.writing-ministry p,
+.learning-prayer p,
+.how-to-pray p,
+.study-library p,
+.study-encouragement p,
+.daily-walk p,
+.bible-first p,
+.resource-library p,
+.contact-introduction p{
+  max-width: 100%;
+  line-height: 1.85;
+  margin-bottom: 1.35rem;
+  text-wrap: pretty;
+}
+
+.chapter-content p{
+  font-size: 1.04rem;
+}
+
+.chapter-content ul,
+.chapter-content ol{
+  margin: 1.25rem 0 1.75rem;
+  padding-left: 1.4rem;
+  list-style: revert;
+}
+
+.chapter-content li{
+  margin-bottom: .65rem;
+  line-height: 1.8;
+}
+
+/* Two-column feature sections align from a common center */
+.preview-grid{
+  width: 100%;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  column-gap: clamp(38px, 5vw, 72px);
+  row-gap: 36px;
+}
+
+.preview-image{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-image img{
+  display: block;
+  margin-inline: auto;
+}
+
+.preview-content{
+  max-width: 680px;
+}
+
+.preview-content .section-divider{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Grids and cards use consistent spacing and internal alignment */
+.topic-grid,
+.resource-grid,
+.contents-grid,
+.chapter-nav-grid{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+  gap: clamp(20px, 2.4vw, 30px);
+}
+
+.topic-grid .card,
+.resource-grid .card,
+.chapter-nav{
+  height: 100%;
+  min-width: 0;
+}
+
+.card{
+  padding: clamp(26px, 3vw, 36px);
+  text-align: left;
+}
+
+.card h3,
+.card h4{
+  text-wrap: balance;
+}
+
+.chapter-card{
+  padding: 0 0 clamp(28px, 3vw, 38px);
+}
+
+.chapter-card p{
+  max-width: 720px;
+  line-height: 1.8;
+}
+
+.chapter-card .primary-button,
+.chapter-card .secondary-button{
+  margin-top: 4px;
+}
+
+/* Form controls and footer follow the same content grid */
+.contact-form{
+  width: min(100%, 780px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-grid{
+  align-items: start;
+}
+
+.site-footer .footer-grid{
+  width: 100%;
+  align-items: start;
+}
+
+.footer-brand,
+.footer-links,
+.footer-scripture{
+  min-width: 0;
+}
+
+/* Tablet: stack feature content cleanly before columns become cramped */
+@media(max-width: 900px){
+  :root{
+    --page-gutter: 28px;
+  }
+
+  .preview-grid{
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .preview-content{
+    width: min(100%, var(--reading-width));
+    max-width: var(--reading-width);
+    margin-inline: auto;
+  }
+
+  .preview-content .section-divider{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .topic-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand{
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile: comfortable page gutters and a single clear reading flow */
+@media(max-width: 680px){
+  :root{
+    --page-gutter: 21px;
+    --section-space: 50px;
+  }
+
+  .container,
+  .page-header .container,
+  .site-header .container,
+  .site-footer .container{
+    width: calc(100% - 2 * var(--page-gutter));
+  }
+
+  main > .page-header{
+    padding-top: 112px;
+    padding-bottom: 38px;
+  }
+
+  main > section:not(.hero):not(.series-hero){
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+  }
+
+  .section-header{
+    margin-bottom: 28px;
+  }
+
+  .section-header h2{
+    font-size: clamp(1.75rem, 7vw, 2.35rem);
+  }
+
+  .page-header h1{
+    font-size: clamp(2.1rem, 9vw, 3.15rem);
+  }
+
+  .page-intro{
+    margin-top: 18px;
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+
+  .chapter-content{
+    width: 100%;
+  }
+
+  .chapter-content p,
+  .book-introduction p,
+  .author-story p,
+  .author-calling p,
+  .writing-ministry p,
+  .learning-prayer p,
+  .how-to-pray p,
+  .study-library p,
+  .study-encouragement p,
+  .daily-walk p,
+  .bible-first p,
+  .resource-library p,
+  .contact-introduction p{
+    font-size: 1rem;
+    line-height: 1.82;
+    margin-bottom: 1.15rem;
+  }
+
+  .chapter-content h2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
+  }
+
+  .topic-grid,
+  .resource-grid,
+  .contents-grid,
+  .chapter-nav-grid{
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .card{
+    padding: 22px;
+  }
+
+  .preview-grid{
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .preview-image img{
+    max-width: min(100%, 300px);
+  }
+
+  .preview-content{
+    text-align: left;
+  }
+
+  .preview-content .section-divider{
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .chapter-scripture{
+    margin: 28px 0;
+    padding: 24px 20px;
+  }
+
+  .chapter-navigation{
+    padding: 38px 0;
+  }
+
+  .chapter-nav{
+    padding: 20px;
+  }
+
+  .contact-form{
+    padding: 20px;
+  }
+
+  .footer-grid{
+    grid-template-columns: minmax(0, 1fr);
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer-brand{
+    grid-column: auto;
+  }
+
+  .footer-brand p{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bottom{
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media(max-width: 380px){
+  :root{
+    --page-gutter: 17px;
+  }
+
+  .card,
+  .contact-form{
+    padding: 18px;
+  }
+
+  .button,
+  .primary-button,
+  .secondary-button{
+    max-width: 100%;
+    padding: 13px 22px;
+  }
+}
