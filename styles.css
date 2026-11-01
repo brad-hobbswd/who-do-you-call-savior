@@ -3740,3 +3740,452 @@ main > .resources .section-divider{
     padding-bottom: 42px;
   }
 }
+
+
+/*======================================================
+ABOUT PAGE REDESIGN
+A distinct editorial layout for the story and purpose
+behind Who Do You Call Savior?
+======================================================*/
+
+.about-page{
+  background:var(--bg);
+}
+
+.about-page main > .page-header{
+  padding:160px 0 76px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(199,162,82,.13), transparent 58%),
+    linear-gradient(180deg,#f8f5ef 0%,#fbf9f5 100%);
+  border-bottom:1px solid rgba(199,162,82,.18);
+}
+
+.about-page .page-header .container{
+  width:min(920px,92%);
+}
+
+.about-page .page-header h1{
+  max-width:900px;
+  margin:18px auto 0;
+  font-size:clamp(2.65rem,5.5vw,4.6rem);
+  line-height:1.12;
+  letter-spacing:-.025em;
+  text-wrap:balance;
+}
+
+.about-page .page-header .section-divider{
+  width:84px;
+  margin:28px auto 24px;
+}
+
+.about-page .page-intro{
+  max-width:760px;
+  margin:0 auto;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(1.35rem,2.2vw,1.75rem);
+  line-height:1.55;
+  color:#5d6268;
+  text-wrap:balance;
+}
+
+.about-page .book-quote{
+  padding:48px 0 54px;
+  background:linear-gradient(115deg,#1b2b3d 0%,#2b4358 100%);
+  text-align:center;
+}
+
+.about-page .book-quote .container{
+  width:min(1000px,90%);
+}
+
+.about-page .book-quote blockquote{
+  max-width:900px;
+  margin:0 auto;
+  color:#fffaf0;
+  font-size:clamp(1.7rem,3.2vw,2.55rem);
+  line-height:1.45;
+  text-wrap:balance;
+}
+
+.about-page .book-introduction{
+  padding:88px 0 92px;
+  background:#fff;
+}
+
+.about-page .book-introduction .preview-grid{
+  max-width:1080px;
+  grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);
+  align-items:center;
+  gap:clamp(42px,6vw,82px);
+}
+
+.about-page .book-introduction .preview-image{
+  padding:34px;
+  border:1px solid #e8dfd1;
+  border-radius:26px;
+  background:linear-gradient(145deg,#f8f5ef,#eee6d9);
+  box-shadow:0 18px 50px rgba(35,56,76,.08);
+}
+
+.about-page .book-introduction .preview-image img{
+  width:100%;
+  max-width:330px;
+  border:0;
+  border-radius:8px;
+  box-shadow:0 20px 38px rgba(24,35,46,.2);
+}
+
+.about-page .preview-content{
+  max-width:690px;
+}
+
+.about-page .preview-content .eyebrow{
+  margin-bottom:12px;
+}
+
+.about-page .preview-content h2,
+.about-page .book-journey h2{
+  margin-bottom:18px;
+  font-size:clamp(2rem,3.4vw,2.9rem);
+  line-height:1.2;
+  text-wrap:balance;
+}
+
+.about-page .preview-content .section-divider{
+  width:76px;
+  margin:22px 0 28px;
+}
+
+.about-page .book-introduction .preview-content p,
+.about-page .book-purpose p,
+.about-page .book-journey .preview-content p,
+.about-page .book-invitation .invitation-content p{
+  font-size:1.02rem;
+  line-height:1.9;
+  color:#50545a;
+  margin-bottom:1.2rem;
+}
+
+.about-page .book-introduction .preview-content .lead{
+  margin:26px 0 0;
+  color:var(--gold-dark);
+  font-size:2.1rem;
+  text-align:left;
+}
+
+.about-page .book-purpose{
+  padding:82px 0 86px;
+  background:#f4efe7;
+}
+
+.about-page .book-purpose > .container{
+  width:min(850px,90%);
+}
+
+.about-page .book-purpose .section-header{
+  margin:0 auto 34px;
+}
+
+.about-page .book-purpose .section-header h2,
+.about-page .book-themes .section-header h2{
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  margin-bottom:0;
+  text-wrap:balance;
+}
+
+.about-page .book-purpose .section-divider,
+.about-page .book-themes .section-divider{
+  width:76px;
+  margin:22px auto 0;
+}
+
+.about-page .book-purpose p:not(.eyebrow){
+  font-size:1.06rem;
+  line-height:1.95;
+  margin-bottom:1.35rem;
+  color:#4d5258;
+}
+
+.about-page .book-journey{
+  padding:88px 0;
+  background:#fff;
+}
+
+.about-page .book-journey .preview-grid{
+  max-width:1080px;
+  grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr);
+  gap:clamp(42px,6vw,80px);
+}
+
+.about-page .book-journey .preview-content .section-divider{
+  width:76px;
+  margin:22px 0 28px;
+}
+
+.about-page .book-journey .preview-image{
+  padding:26px;
+  border-radius:24px;
+  background:#f4efe7;
+  border:1px solid #e8dfd1;
+}
+
+.about-page .book-journey .preview-image img{
+  max-width:360px;
+  border:0;
+  border-radius:12px;
+  box-shadow:0 16px 40px rgba(35,56,76,.13);
+}
+
+.about-page .book-themes{
+  padding:84px 0 92px;
+  background:#f4efe7;
+}
+
+.about-page .book-themes .section-header{
+  margin-bottom:40px;
+}
+
+.about-page .book-themes .resource-grid{
+  max-width:1080px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  margin:0 auto;
+}
+
+.about-page .book-themes .card{
+  min-height:205px;
+  padding:28px 26px;
+  background:#fff;
+  border:1px solid #e8dfd1;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(35,56,76,.045);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+
+.about-page .book-themes .card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 32px rgba(35,56,76,.09);
+}
+
+.about-page .book-themes .card h3{
+  margin-bottom:12px;
+  font-size:1.25rem;
+}
+
+.about-page .book-themes .card h3::after{
+  content:"";
+  display:block;
+  width:34px;
+  height:2px;
+  margin-top:13px;
+  background:var(--gold);
+}
+
+.about-page .book-themes .card p{
+  margin:0;
+  color:#62666b;
+  font-size:.96rem;
+  line-height:1.75;
+}
+
+.about-page .scripture{
+  padding:66px 0 70px;
+  background:#23384c;
+  text-align:center;
+}
+
+.about-page .scripture .container{
+  width:min(900px,90%);
+}
+
+.about-page .scripture blockquote{
+  color:#fffaf0;
+  font-size:clamp(1.7rem,3.1vw,2.5rem);
+  line-height:1.5;
+  text-wrap:balance;
+}
+
+.about-page .scripture cite{
+  margin-top:22px;
+  color:#e2c886;
+  letter-spacing:2px;
+}
+
+.about-page .book-invitation{
+  padding:88px 0 94px;
+  background:linear-gradient(180deg,#fbf9f5 0%,#f1eadd 100%);
+  text-align:center;
+}
+
+.about-page .book-invitation .invitation-content{
+  width:min(820px,92%);
+  margin:0 auto;
+}
+
+.about-page .book-invitation h2{
+  max-width:760px;
+  margin:0 auto;
+  font-size:clamp(2rem,3.7vw,3rem);
+  line-height:1.25;
+  text-wrap:balance;
+}
+
+.about-page .book-invitation .section-divider{
+  width:76px;
+  margin:24px auto 30px;
+}
+
+.about-page .book-invitation .chapter-scripture{
+  margin:34px 0 38px;
+  padding:28px 34px;
+  border:1px solid #e5d7bd;
+  border-radius:18px;
+  background:rgba(255,255,255,.72);
+}
+
+.about-page .book-invitation .chapter-scripture blockquote{
+  font-size:clamp(1.35rem,2.5vw,1.85rem);
+  line-height:1.55;
+}
+
+.about-page .book-invitation .chapter-scripture cite{
+  display:block;
+  margin-top:16px;
+  color:var(--gold-dark);
+  font-family:"Cinzel",serif;
+  font-size:.85rem;
+  font-style:normal;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.about-page .book-invitation .button-group{
+  margin-top:32px;
+  gap:14px;
+}
+
+@media(max-width:900px){
+  .about-page .book-introduction .preview-grid,
+  .about-page .book-journey .preview-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:36px;
+  }
+
+  .about-page .book-introduction .preview-image,
+  .about-page .book-journey .preview-image{
+    width:min(100%,520px);
+    margin:0 auto;
+  }
+
+  .about-page .book-introduction .preview-image img{
+    max-width:290px;
+  }
+
+  .about-page .book-journey .preview-image img{
+    max-width:320px;
+  }
+
+  .about-page .book-introduction .preview-content,
+  .about-page .book-journey .preview-content{
+    width:min(100%,760px);
+    margin:0 auto;
+  }
+
+  .about-page .book-themes .resource-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  .about-page main > .page-header{
+    padding:126px 0 48px;
+  }
+
+  .about-page .page-header h1{
+    font-size:clamp(2.25rem,9vw,3.25rem);
+  }
+
+  .about-page .page-intro{
+    font-size:1.28rem;
+    line-height:1.55;
+  }
+
+  .about-page .book-quote{
+    padding:36px 0 40px;
+  }
+
+  .about-page .book-quote blockquote{
+    font-size:1.55rem;
+  }
+
+  .about-page .book-introduction,
+  .about-page .book-journey{
+    padding:54px 0;
+  }
+
+  .about-page .book-introduction .preview-grid,
+  .about-page .book-journey .preview-grid{
+    gap:30px;
+  }
+
+  .about-page .book-introduction .preview-image,
+  .about-page .book-journey .preview-image{
+    padding:20px;
+    border-radius:18px;
+  }
+
+  .about-page .book-introduction .preview-image img{
+    max-width:250px;
+  }
+
+  .about-page .book-purpose,
+  .about-page .book-themes{
+    padding:56px 0;
+  }
+
+  .about-page .book-purpose .section-header,
+  .about-page .book-themes .section-header{
+    margin-bottom:28px;
+  }
+
+  .about-page .book-purpose p:not(.eyebrow),
+  .about-page .book-introduction .preview-content p,
+  .about-page .book-journey .preview-content p,
+  .about-page .book-invitation .invitation-content p{
+    font-size:.98rem;
+    line-height:1.82;
+  }
+
+  .about-page .book-themes .resource-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:14px;
+  }
+
+  .about-page .book-themes .card{
+    min-height:0;
+    padding:23px;
+  }
+
+  .about-page .scripture{
+    padding:48px 0;
+  }
+
+  .about-page .book-invitation{
+    padding:58px 0 64px;
+  }
+
+  .about-page .book-invitation .chapter-scripture{
+    padding:22px 18px;
+    margin:26px 0;
+  }
+
+  .about-page .book-invitation .button-group{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .about-page .book-invitation .button-group a{
+    width:100%;
+  }
+}
