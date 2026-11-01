@@ -5527,3 +5527,241 @@ THE QUESTION SERIES: EDITORIAL LANDING PAGE
     width:100%;
   }
 }
+
+
+/*======================================================
+AUTHOR PAGE: EDITORIAL RHYTHM AND DISTINCT SECTIONS
+======================================================*/
+
+.author-page main > .page-header{
+  padding:148px 0 62px;
+}
+
+.author-page .page-header h1{
+  margin-bottom:18px;
+  letter-spacing:.015em;
+}
+
+.author-page .page-header .section-divider{
+  width:72px;
+  margin:25px auto 24px;
+}
+
+.author-page .page-intro{
+  max-width:720px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(1.35rem,2.3vw,1.75rem);
+  line-height:1.55;
+  color:#59616a;
+}
+
+.author-page .author-introduction,
+.author-page .author-calling,
+.author-page .personal{
+  padding:72px 0;
+}
+
+.author-page .author-introduction .preview-grid,
+.author-page .author-calling .preview-grid,
+.author-page .personal .preview-grid{
+  gap:clamp(38px,6vw,82px);
+  align-items:center;
+}
+
+.author-page .author-introduction .preview-image,
+.author-page .author-calling .preview-image,
+.author-page .personal .preview-image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+}
+
+.author-page .author-introduction .preview-image img,
+.author-page .author-calling .preview-image img,
+.author-page .personal .preview-image img{
+  width:100%;
+  max-width:440px;
+  max-height:520px;
+  object-fit:contain;
+  border-radius:12px;
+  box-shadow:0 16px 38px rgba(35,56,76,.13);
+}
+
+.author-page .preview-content{
+  max-width:660px;
+}
+
+.author-page .preview-content .eyebrow,
+.author-page .section-header .eyebrow{
+  margin-bottom:12px;
+}
+
+.author-page .preview-content h2,
+.author-page .section-header h2{
+  margin-bottom:18px;
+  font-size:clamp(1.85rem,3.1vw,2.55rem);
+  line-height:1.25;
+  text-wrap:balance;
+}
+
+.author-page .preview-content .section-divider{
+  width:68px;
+  margin:22px 0 26px;
+}
+
+.author-page .preview-content p{
+  margin-bottom:17px;
+  color:#555d65;
+  font-size:.98rem;
+  line-height:1.88;
+}
+
+.author-page .author-story{
+  padding:66px 0 70px;
+  background:#f2ede5;
+}
+
+.author-page .author-story > .container{
+  width:min(850px,90%);
+}
+
+.author-page .author-story .section-header{
+  margin-bottom:28px;
+}
+
+.author-page .author-story .section-header .section-divider,
+.author-page .author-reader-help .section-header .section-divider,
+.author-page .author-invitation .section-divider{
+  width:70px;
+  margin:22px auto 26px;
+}
+
+.author-page .author-story > .container > p{
+  margin:0 auto 18px;
+  color:#535b63;
+  font-size:1rem;
+  line-height:1.95;
+}
+
+.author-page .author-calling{
+  background:#fff;
+}
+
+.author-page .personal{
+  background:#f8f5ef;
+}
+
+.author-page .author-reader-help{
+  padding:72px 0 76px;
+}
+
+.author-page .author-reader-help .section-header{
+  margin-bottom:34px;
+}
+
+.author-page .author-reader-help .section-intro{
+  max-width:700px;
+  font-size:.98rem;
+  line-height:1.85;
+}
+
+.author-page .author-help-grid{
+  gap:16px;
+}
+
+.author-page .author-help-card{
+  padding:24px 26px 22px;
+  border-color:#e8e0d4;
+}
+
+.author-page .author-help-card p{
+  line-height:1.7;
+}
+
+.author-page .author-help-contact{
+  margin-top:28px;
+}
+
+.author-page .author-invitation{
+  padding:68px 0 76px;
+  text-align:center;
+}
+
+.author-page .author-invitation .invitation-content{
+  max-width:760px;
+}
+
+.author-page .author-invitation .invitation-content > p{
+  color:#555d65;
+  line-height:1.85;
+}
+
+.author-page .author-invitation .chapter-scripture{
+  margin:30px auto;
+  padding:24px 28px;
+  border:1px solid #e5dac8;
+  border-radius:16px;
+  background:rgba(255,255,255,.66);
+}
+
+.author-page .author-invitation blockquote{
+  font-size:clamp(1.45rem,2.5vw,2rem);
+}
+
+.author-page .author-invitation .button-group{
+  justify-content:center;
+}
+
+@media(max-width:760px){
+  .author-page main > .page-header{
+    padding:122px 0 46px;
+  }
+
+  .author-page .author-introduction,
+  .author-page .author-calling,
+  .author-page .personal{
+    padding:50px 0;
+  }
+
+  .author-page .author-introduction .preview-grid,
+  .author-page .author-calling .preview-grid,
+  .author-page .personal .preview-grid{
+    gap:30px;
+  }
+
+  .author-page .author-introduction .preview-image img,
+  .author-page .author-calling .preview-image img,
+  .author-page .personal .preview-image img{
+    max-width:340px;
+    max-height:420px;
+  }
+
+  .author-page .preview-content h2,
+  .author-page .section-header h2{
+    font-size:clamp(1.7rem,6vw,2.15rem);
+  }
+
+  .author-page .author-story,
+  .author-page .author-reader-help,
+  .author-page .author-invitation{
+    padding:52px 0 58px;
+  }
+
+  .author-page .author-story > .container{
+    width:min(100% - 38px,850px);
+  }
+
+  .author-page .author-invitation .chapter-scripture{
+    padding:21px 18px;
+  }
+
+  .author-page .author-invitation .button-group{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .author-page .author-invitation .button-group a{
+    width:100%;
+  }
+}
